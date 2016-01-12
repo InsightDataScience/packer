@@ -1,0 +1,19 @@
+{
+    "builders": [{
+        "type": "amazon-ebs",
+        "communicator": "ssh",
+        "region": "us-west-2",
+        "source_ami": "ami-0d5b6c3d",
+        "instance_type": "m4.large",
+        "ssh_username": "admin",
+        "ami_name": "docker-debian-{{timestamp}}",
+        "ssh_username": "admin"
+    }],
+    "provisioners": [{
+        "type": "shell",
+        "scripts": [
+          "./install_docker_debian.sh"
+        ],
+        "pause_before": "30s"
+    }]
+}
