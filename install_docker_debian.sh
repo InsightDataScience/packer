@@ -8,8 +8,11 @@ sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58
 
 sudo sh -c 'echo "deb https://apt.dockerproject.org/repo debian-jessie main" > /etc/apt/sources.list.d/docker.list'
 
-# Install and test out docker
 sudo apt-get update
+
+sudo apt-get install -y tree nmon
+
+# Install and test out docker
 sudo apt-get install -y docker-engine
 sudo apt-get install -y vim
 sudo apt-get install -y curl
